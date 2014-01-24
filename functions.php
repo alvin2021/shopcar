@@ -65,7 +65,7 @@ function showcart() {
 
 			//执行主查询，获取已选商品的详细内容
 			$itemssql = "select products.*, orderitems.*, orderitems.id AS itemid FROM products, orderitems WHERE orderitems.product_id = products.id AND order_id = " . $custrow['id'];
-			var_dump($itemssql);
+			//var_dump($itemssql);
 			$itemsres = mysql_query($itemssql);
 			$itemnumrows = mysql_num_rows($itemsres);
 
